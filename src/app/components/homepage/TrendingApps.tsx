@@ -4,14 +4,15 @@ import AppCard from "../shared/AppCard";
 const getAllApps = async () => {
   const res = await fetch("http://localhost:3000/data.json");
   const data = await res.json();
-  return data
+  return data;
 };
 
 const TrendingApps = async () => {
-    const AppData = await getAllApps();
-    console.log( AppData);
+  const AppData = await getAllApps();
+  console.log(AppData);
 
-    return  <section className="bg-white py-14 md:py-20">
+  return (
+    <section className="bg-white py-14 md:py-20">
       <div className="container mx-auto px-4">
         {/* Section Heading */}
         <div className="mb-10 text-center">
@@ -24,19 +25,19 @@ const TrendingApps = async () => {
           </h2>
 
           <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-gray-500 md:text-base">
-            Explore all trending apps on the market developed by top
-            developers.
+            Explore all trending apps on the market developed by top developers.
           </p>
         </div>
 
         {/* Display Data */}
         <div className="grid gap-5 grid-cols-1 sm:grid-cols-3 lg:grid-cols-4">
-          {AppData.slice(0,8).map((app: TApp) => {
+          {AppData.slice(0, 8).map((app: TApp) => {
             return <AppCard key={app.id} app={app} />;
           })}
         </div>
       </div>
     </section>
+  );
 };
 
 export default TrendingApps;
