@@ -1,11 +1,8 @@
 import { TApp } from '@/types/apps.type';
 import React from 'react';
 import AppCard from '../components/shared/AppCard';
-const getAllApps = async () => {
-  const res = await fetch("http://localhost:3000/data.json");
-  const data = await res.json();
-  return data;
-};
+import { getAllApps } from '@/lib/apps';
+
 
 const AllAppsPage = async () => {
     const AppData = await getAllApps()
