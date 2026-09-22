@@ -19,7 +19,7 @@ const AllAppsPage = async () => {
           </span>
 
           <h2 className="mt-3 font-serif text-3xl font-bold tracking-tight text-[#131313] md:text-4xl">
-            Trending Apps
+            Our All Application
           </h2>
 
           <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-gray-500 md:text-base">
