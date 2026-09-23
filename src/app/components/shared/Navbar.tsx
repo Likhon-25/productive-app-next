@@ -25,7 +25,7 @@ const links = (
 
     <li>
       <Link
-        href="/installation"
+        href="/installed"
         className="text-sm font-medium text-gray-600 transition hover:text-[#23BE0A]"
       >
         Installation

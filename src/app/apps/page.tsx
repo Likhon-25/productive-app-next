@@ -1,13 +1,12 @@
-import { TApp } from '@/types/apps.type';
-import React from 'react';
-import AppCard from '../components/shared/AppCard';
-import { getAllApps } from '@/lib/apps';
-
+import { TApp } from "@/types/apps.type";
+import React from "react";
+import AppCard from "../components/shared/AppCard";
+import { getAllApps } from "@/lib/apps";
 
 const AllAppsPage = async () => {
-    const AppData = await getAllApps()
-    return (
-         <section className="bg-white py-14 md:py-20">
+  const AppData = await getAllApps();
+  return (
+    <section className="bg-white py-14 md:py-20">
       <div className="container mx-auto px-4">
         {/* Section Heading */}
         <div className="mb-10 text-center">
@@ -32,7 +31,7 @@ const AllAppsPage = async () => {
         </div>
       </div>
     </section>
-    );
+  );
 };
 
 export default AllAppsPage;
